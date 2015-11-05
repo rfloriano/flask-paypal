@@ -118,7 +118,7 @@ def plan_payment_url(value):
             "payment_method": "paypal"
         },
     })
-    import ipdb; ipdb.set_trace()  # XXX BREAKPOINT
+
     if billing_agreement.create():
         for link in billing_agreement.links:
             if link.rel == "approval_url":
